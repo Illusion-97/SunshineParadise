@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+    <SplitPane dividerPositions="0.12814070351758794" layoutX="175.0" layoutY="77.0" orientation="VERTICAL" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" style="-fx-background-color: radial-gradient(center 50% 50% , radius 50% , yellow, cyan);">
+            <Label alignment="CENTER" contentDisplay="TOP" graphicTextGap="0.0" layoutX="251.0" layoutY="-6.0" prefHeight="48.0" prefWidth="598.0" style="-fx-stroke: black;" text="Paradise" textAlignment="CENTER" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                <font>
+                    <Font name="Felix Titling" size="43.0" />
+                </font>
+                <textFill>
+                    <LinearGradient endX="0.09999999999999998" endY="0.9047619047619047" startX="0.10476190476190476" startY="0.18095238095238092">
+                        <stops>
+                            <Stop>
+                                <color>
+                                    <Color red="0.9200000166893005" green="0.6107869744300842" blue="0.2759999930858612" />
+                                </color>
+                            </Stop>
+                            <Stop offset="1.0">
+                                <color>
+                                    <Color green="0.6614035367965698" blue="0.7631579041481018" />
+                                </color>
+                            </Stop>
+                        </stops>
+                    </LinearGradient>
+                </textFill>
+            </Label>
+        </AnchorPane>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+            <SplitPane dividerPositions="0.36577181208053694" layoutX="199.0" layoutY="131.0" prefHeight="344.0" prefWidth="598.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                    <TabPane fx:id="beanTabPane" layoutY="71.0" prefHeight="317.0" prefWidth="215.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="25.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                        <Tab fx:id="tripTab" closable="false" text="Trips">
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                <ListView fx:id="tripsListview" layoutX="8.0" layoutY="38.0" onMouseClicked="#selectTrip" prefHeight="313.0" prefWidth="215.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                            </AnchorPane>
+                        </Tab>
+                        <Tab fx:id="placeTab" text="Places">
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                <ListView fx:id="placesListView" layoutX="8.0" layoutY="92.0" onMouseClicked="#selectPlace" prefHeight="313.0" prefWidth="215.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                            </AnchorPane>
+                        </Tab>
+                    </TabPane>
+               <Button fx:id="addButton" layoutY="316.0" mnemonicParsing="false" onMouseClicked="#addUnlock" prefHeight="30.0" prefWidth="107.0" text="Add" />
+               <Button fx:id="removeButton" layoutX="108.0" layoutY="316.0" mnemonicParsing="false" onMouseClicked="#removeBean" prefHeight="30.0" prefWidth="107.0" text="Remove" />
+                </AnchorPane>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                    <SplitPane dividerPositions="0.6911764705882353" layoutX="125.0" layoutY="71.0" orientation="VERTICAL" prefHeight="342.0" prefWidth="375.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                            <Label layoutX="14.0" layoutY="14.0" text="Trip :">
+                                <font>
+                                    <Font size="20.0" />
+                                </font>
+                            </Label>
+                            <Label layoutX="14.0" layoutY="54.0" text="Name :" />
+                            <TextField fx:id="TripNameField" layoutX="65.0" layoutY="50.0" />
+                     <TextField fx:id="departureTextField" editable="false" layoutX="65.0" layoutY="104.0" />
+                            <ComboBox fx:id="TripDepartureBox" layoutX="65.0" layoutY="104.0" prefWidth="150.0" />
+                     <TextField fx:id="TerminalTextField" editable="false" layoutX="66.0" layoutY="151.0" />
+                            <ComboBox fx:id="TripTerminalBox" layoutX="65.0" layoutY="151.0" prefWidth="150.0" />
+                            <Label layoutX="14.0" layoutY="197.0" text="Cost :" />
+                            <TextField fx:id="TripCostBox" layoutX="65.0" layoutY="193.0" />
+                            <Label layoutX="7.0" layoutY="155.0" text="Terminal :" />
+                            <Label layoutX="3.0" layoutY="108.0" text="Departure :" />
+                            <Button fx:id="TripCreateButton" layoutX="283.0" layoutY="107.0" mnemonicParsing="false" onMouseClicked="#createTrip" prefHeight="37.0" prefWidth="60.0" text="Create" />
+                     <Label layoutX="228.0" layoutY="197.0" text="Ex : 123.45" />
+                        </AnchorPane>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                            <Label layoutX="14.0" layoutY="14.0" text="Place :">
+                                <font>
+                                    <Font size="20.0" />
+                                </font>
+                            </Label>
+                            <Label layoutX="14.0" layoutY="51.0" text="Name :" />
+                            <TextField fx:id="PlaceNameField" layoutX="65.0" layoutY="47.0" />
+                            <Button fx:id="PlaceCreateButton" layoutX="307.0" layoutY="60.0" mnemonicParsing="false" onMouseClicked="#createPlace" text="Create" />
+                            <Button fx:id="PlaceEditButton" layoutX="244.0" layoutY="60.0" mnemonicParsing="false" onMouseClicked="#editPlace" text="Edit" />
+                        </AnchorPane>
+                    </SplitPane>
+                </AnchorPane>
+            </SplitPane>
+        </AnchorPane>
+    </SplitPane>
+</AnchorPane>
