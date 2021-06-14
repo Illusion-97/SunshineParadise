@@ -113,11 +113,13 @@ public class Controller implements Initializable {
             }
         } else  {
             if(jpd.remove(placesListView.getSelectionModel().getSelectedItem())){
-                refreshLists();
+                refreshBoxes();
+                initPlace();
             } else {
                 showSQLError();
             }
         }
+        refreshLists();
     }
 
     @FXML
@@ -132,6 +134,7 @@ public class Controller implements Initializable {
         }
         initPlace();
         refreshPlaces();
+        refreshBoxes();
     }
 
     @FXML
@@ -146,14 +149,12 @@ public class Controller implements Initializable {
                 showSQLError();
             }
         }
+        refreshBoxes();
     }
 
     @FXML
     private void createTrip() {
-        boolean ok = controlField(TripNameField);
-        ok = controlBox(TripDepartureBox);
-        ok = controlBox(TripTerminalBox);
-        ok = controlFloat();
+        boolean ok = (controlField(TripNameField) && controlBox(TripDepartureBox) && controlBox(TripTerminalBox) &&  controlFloat());
         if (ok){
             if(jtd.create(new Trip(null,TripNameField.getText(),
                     TripDepartureBox.getSelectionModel().getSelectedItem().getId(),

@@ -39,13 +39,13 @@
                                 <ListView fx:id="tripsListview" layoutX="8.0" layoutY="38.0" onMouseClicked="#selectTrip" prefHeight="313.0" prefWidth="215.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
                             </AnchorPane>
                         </Tab>
-                        <Tab fx:id="placeTab" text="Places">
+                        <Tab text="Places">
                             <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                                 <ListView fx:id="placesListView" layoutX="8.0" layoutY="92.0" onMouseClicked="#selectPlace" prefHeight="313.0" prefWidth="215.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
                             </AnchorPane>
                         </Tab>
                     </TabPane>
-               <Button fx:id="addButton" layoutY="316.0" mnemonicParsing="false" onMouseClicked="#addUnlock" prefHeight="30.0" prefWidth="107.0" text="Add" />
+               <Button layoutY="316.0" mnemonicParsing="false" onMouseClicked="#addUnlock" prefHeight="30.0" prefWidth="107.0" text="Add" />
                <Button fx:id="removeButton" layoutX="108.0" layoutY="316.0" mnemonicParsing="false" onMouseClicked="#removeBean" prefHeight="30.0" prefWidth="107.0" text="Remove" />
                 </AnchorPane>
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
@@ -67,7 +67,7 @@
                             <Label layoutX="7.0" layoutY="155.0" text="Terminal :" />
                             <Label layoutX="3.0" layoutY="108.0" text="Departure :" />
                             <Button fx:id="TripCreateButton" layoutX="283.0" layoutY="107.0" mnemonicParsing="false" onMouseClicked="#createTrip" prefHeight="37.0" prefWidth="60.0" text="Create" />
-                     <Label layoutX="228.0" layoutY="197.0" text="Ex : 123.45" />
+                     <Label layoutX="228.0" layoutY="197.0" text="Ex : 123,45" />
                         </AnchorPane>
                         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
                             <Label layoutX="14.0" layoutY="14.0" text="Place :">

@@ -6,7 +6,7 @@ public final class ConnectionManager implements AutoCloseable{
 
     private static volatile ConnectionManager instance = null;
 
-    private static final String url = "jdbc:mysql://localhost:3306/paradise?serverTimezone=UTC";
+    private static final String url = "jdbc:mysql://localhost:3306/sparadise?serverTimezone=UTC";
     private static final String utilisateur = "root";
     private static final String motDePasse = "";
 
